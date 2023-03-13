@@ -1,0 +1,443 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+
+{% block title %}{{ title }}{% endblock %}
+{% block metatitle %}{{ metatitle }}{% endblock %}
+{% block description %}{{ description }}{% endblock %}
+
+
+
+{% block content %}
+	<article>
+
+			<!--HERO Section-->
+			<section class="hero text-center" aria-label="home" id="home">
+			<ul class="hero-slider" data-hero-slider>
+
+				<li class="slider-item active" data-hero-slider-item>
+
+					<div class="slider-bg">
+						<img src="{% static 'main/images/hero-slider-1.jpg' %}" width="1880" height="950" alt="" class="img-cover">
+					</div>
+
+					<p class="label-2 section-subtitle slider-reveal">Традиційна та смачна кухня</p>
+
+					<h1 class="display-1 hero-title slider-reveal">
+						За любов до<br>
+						смачної їжі
+					</h1>
+
+					<p class="body-2 hero-text slider-reveal">
+						Приходьте сім’єю та відчуйте насолоду від апетитної їжі
+					</p>
+
+					<a href="#" class="btn btn-primary slider-reveal">
+						<span class="text text-1">Перегляньте наше меню</span>
+						<span class="text text-2" aria-hidden="true">Перегляньте наше меню</span>
+					</a>
+
+				</li>
+
+				<li class="slider-item active" data-hero-slider-item>
+
+					<div class="slider-bg">
+						<img src="{% static 'main/images/hero-slider-2.jpg' %}" width="1880" height="950" alt="" class="img-cover">
+					</div>
+
+					<p class="label-2 section-subtitle slider-reveal">Чудовий досвід</p>
+
+					<h1 class="display-1 hero-title slider-reveal">
+						Смаки, натхненні <br>
+						сезонами
+					</h1>
+
+					<p class="body-2 hero-text slider-reveal">
+						Приходьте сім’єю та відчуйте насолоду від апетитної їжі
+					</p>
+
+					<a href="#" class="btn btn-primary slider-reveal">
+						<span class="text text-1">Перегляньте наше меню</span>
+						<span class="text text-2" aria-hidden="true">Перегляньте наше меню</span>
+					</a>
+
+				</li>
+
+				<li class="slider-item active" data-hero-slider-item>
+
+					<div class="slider-bg">
+						<img src="{% static 'main/images/hero-slider-3.jpg' %}" width="1880" height="950" alt="" class="img-cover">
+					</div>
+
+					<p class="label-2 section-subtitle slider-reveal">Чудово і смачно</p>
+
+					<h1 class="display-1 hero-title slider-reveal">
+						Де кожен смак<br>
+						розповідає історію
+					</h1>
+
+					<p class="body-2 hero-text slider-reveal">
+						Приходьте сім’єю та відчуйте насолоду від апетитної їжі
+					</p>
+
+					<a href="#" class="btn btn-primary slider-reveal">
+						<span class="text text-1">Перегляньте наше меню</span>
+						<span class="text text-2" aria-hidden="true">Перегляньте наше меню</span>
+					</a>
+
+				</li>
+
+			</ul>
+
+			<button class="slider-btn prev" aria-label="slide to previous" data-prev-btn>
+				<ion-icon name="chevron-back"></ion-icon>
+			</button>
+
+			<button class="slider-btn next" aria-label="slide to next" data-next-btn>
+				<ion-icon name="chevron-forward"></ion-icon>
+			</button>
+
+			<a href="{% url 'home' %}#contact" class="hero-btn has-after">
+				<img src="{% static 'main/images/hero-icon.png' %}" width="48" height="48" alt="booking icon">
+
+				<span class="label-2 text-center span">Замовити столик</span>
+			</a>
+
+
+		</section>
+
+			<!--MENU-->
+
+			<section class="section service bg-black-10 text-center" aria-label="service" id="menu">
+			<div class="container">
+				<p class="section-subtitle label-2">Смаки для насолоди</p>
+				<h2 class="headline-1 section-title">Ми пропонуємо найкращий відпочинок</h2>
+				<p class="section-text">
+					Знижка 15% на всі блюда кухні
+					з понеділка по п'ятницю до 15:00
+				</p>
+				<ul class="grid-list image-list">
+					<li>
+						<div class="service-card">
+							<a href="{% url 'kuhnya' %}" class="has-before hover:shine">
+								<figure class="card-banner img-holder" style="--width: 285; --height: 336;">
+									<img src="{% static 'main/images/kyhnya-min.jpg' %}" width="285" height="336" loading="lazy" alt="Кухня"
+									     class="img-cover">
+								</figure>
+							</a>
+
+							<div class="card-content">
+
+								<h3 class="title-4 card-title">
+									<a href="{% url 'kuhnya' %}">Кухня</a>
+								</h3>
+
+								<a href="{% url 'kuhnya' %}" class="btn-text hover-underline label-2">Перейти</a>
+
+							</div>
+
+						</div>
+					</li>
+
+					<li>
+						<div class="service-card">
+
+							<a href="{% url 'bar' %}" class="has-before hover:shine">
+								<figure class="card-banner img-holder" style="--width: 285; --height: 336;">
+									<img src="{% static 'main/images/bar-min.jpg' %}" width="285" height="336" loading="lazy" alt="Бар"
+									     class="img-cover">
+								</figure>
+							</a>
+
+							<div class="card-content">
+
+								<h3 class="title-4 card-title">
+									<a href="{% url 'bar' %}">Бар</a>
+								</h3>
+
+								<a href="{% url 'bar' %}" class="btn-text hover-underline label-2">Перейти</a>
+
+							</div>
+
+						</div>
+					</li>
+
+					<li>
+						<div class="service-card">
+
+							<a href="#" class="has-before hover:shine">
+								<figure class="card-banner img-holder" style="--width: 285; --height: 336;">
+									<img src="{% static 'main/images/psyvannya-maina-min.jpg' %}" width="285" height="336" loading="lazy" alt="Псування майна"
+									     class="img-cover">
+								</figure>
+							</a>
+
+							<div class="card-content">
+
+								<h3 class="title-4 card-title">
+									<a href="#">Псування майна</a>
+								</h3>
+
+								<a href="#" class="btn-text hover-underline label-2">Перейти</a>
+
+							</div>
+
+						</div>
+					</li>
+
+				</ul>
+
+				<img src="{% static 'main/images/shape-1.png' %}" width="246" height="412" loading="lazy" alt="shape"
+				     class="shape shape-1 move-anim">
+				<img src="{% static 'main/images/shape-2.png' %}" width="343" height="345" loading="lazy" alt="shape"
+				     class="shape shape-2 move-anim">
+
+			</div>
+		</section>
+
+			<!--Про нас	-->
+			<section class="section about text-center" aria-labelledby="about-label" id="about">
+				<div class="container">
+
+					<div class="about-content">
+
+						<p class="label-2 section-subtitle" id="about-label">Наш сервіс</p>
+
+						<h2 class="headline-1 section-title">У нас ви звожете організувати</h2>
+
+						<p class="section-text">
+							банкети<br>
+							весілля<br>
+							дні народження<br>
+							корпоративи<br>
+							бізнес-зустрічі<br>
+							поминальні обіди<br>
+							оренда залів / апаратури
+						</p>
+
+						<div class="contact-label">Замовляйте через дзвінок</div>
+
+						<a href="tel:+380688876677" class="body-1 contact-number hover-underline">068-887-66-77</a>
+						<a href="tel:+380668876677" class="body-1 contact-number hover-underline">066-887-66-77</a>
+
+						<a href="#" class="btn btn-primary">
+							<span class="text text-1">Read More</span>
+
+							<span class="text text-2" aria-hidden="true">Read More</span>
+						</a>
+
+					</div>
+
+					<figure class="about-banner">
+
+						<img src="{% static 'main/images/about-banner.jpg' %}" width="570" height="570" loading="lazy" alt="about banner"
+						     class="w-100" data-parallax-item data-parallax-speed="1">
+
+						<div class="abs-img abs-img-1 has-before" data-parallax-item data-parallax-speed="1.75">
+							<img src="{% static 'main/images/about-abs-image.jpg' %}" width="285" height="285" loading="lazy" alt=""
+							     class="w-100">
+						</div>
+
+					</figure>
+
+					<img src="{% static 'main/images/shape-3.png' %}" width="197" height="194" loading="lazy" alt="" class="shape">
+
+				</div>
+			</section>
+
+			<!--RESERVATION-->
+
+			<section class="reservation" id="contact">
+				<div class="container">
+
+					<div class="form reservation-form bg-black-10">
+
+						<form action="" class="form-left">
+
+							<h2 class="headline-1 text-center">Онлайн бронювання</h2>
+
+							<p class="form-text text-center">
+								Запит на бронювання <a href="tel:+380688876677" class="link">068-887-66-77</a>
+								або заповніть форму замовлення
+							</p>
+
+							<div class="input-wrapper">
+								<input type="text" name="name" placeholder="Ваше імʼя" autocomplete="off" class="input-field">
+
+								<input type="tel" name="phone" placeholder="Номер телефону" autocomplete="off" class="input-field">
+							</div>
+
+							<div class="input-wrapper">
+
+								<div class="icon-wrapper">
+									<ion-icon name="person-outline" aria-hidden="true"></ion-icon>
+
+									<select name="person" class="input-field">
+										<option value="1-особа">1 особа</option>
+										<option value="2-особи">2 особи</option>
+										<option value="3-особи">3 особи</option>
+										<option value="4-особи">4 особи</option>
+										<option value="5-осіб">5 осіб</option>
+										<option value="6-осіб">6 осіб</option>
+										<option value="7-осіб">7 осіб</option>
+										<option value="8-осіб">8 осіб</option>
+										<option value="9-осіб">9 осіб</option>
+										<option value="10-осіб">10 осіб</option>
+									</select>
+
+									<ion-icon name="chevron-down" aria-hidden="true"></ion-icon>
+								</div>
+
+								<div class="icon-wrapper">
+									<ion-icon name="calendar-clear-outline" aria-hidden="true"></ion-icon>
+
+									<input type="date" name="reservation-date" class="input-field">
+
+									<ion-icon name="chevron-down" aria-hidden="true"></ion-icon>
+								</div>
+
+								<div class="icon-wrapper">
+									<ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+
+									<select name="person" class="input-field">
+										<option value="11:00">11 : 00</option>
+										<option value="12:00">12 : 00</option>
+										<option value="13:00">13 : 00</option>
+										<option value="14:00">14 : 00</option>
+										<option value="15:00">15 : 00</option>
+										<option value="16:00">16 : 00</option>
+										<option value="17:00">17 : 00</option>
+										<option value="18:00">18 : 00</option>
+										<option value="19:00">19 : 00</option>
+										<option value="20:00">20 : 00</option>
+										<option value="21:00">21 : 00</option>
+									</select>
+
+									<ion-icon name="chevron-down" aria-hidden="true"></ion-icon>
+								</div>
+
+							</div>
+
+							<textarea name="message" placeholder="Ваше повідомлення" autocomplete="off" class="input-field"></textarea>
+
+							<button type="submit" class="btn btn-secondary">
+								<span class="text text-1">Замовити столик</span>
+
+								<span class="text text-2" aria-hidden="true">Замовити столик</span>
+							</button>
+
+						</form>
+
+						<div class="form-right text-center" style="background-image: url('./assets/images/form-pattern.png')">
+
+							<h2 class="headline-1 text-center">Зв'яжіться з нами</h2>
+
+							<p class="contact-label">Телефон</p>
+
+							<a href="tel:+380688876677" class="body-1 contact-number hover-underline">068-887-66-77</a>
+							<a href="tel:+380668876677" class="body-1 contact-number hover-underline">066-887-66-77</a>
+
+							<div class="separator"></div>
+
+							<p class="contact-label">Адреса</p>
+
+							<address class="body-4">
+								вул. Співдружності 77а
+							</address>
+
+							<p class="contact-label">Час роботи</p>
+
+							<p class="body-4">
+								Понеділок - Неділя <br>
+								11.00 - 21:00
+							</p>
+
+						</div>
+
+					</div>
+
+				</div>
+			</section>
+
+			<!--FEATURES-->
+
+			<section class="section features text-center" aria-label="features">
+				<div class="container">
+
+					<p class="section-subtitle label-2">ЧОМУ ОБИРАЮТЬ НАС</p>
+
+					<h2 class="headline-1 section-title">Наші переваги</h2>
+
+					<ul class="grid-list">
+
+						<li class="feature-item">
+							<div class="feature-card">
+
+								<div class="card-icon">
+									<img src="{% static 'main/images/features-icon-1.png' %}" width="100" height="80" loading="lazy" alt="icon">
+								</div>
+
+								<h3 class="title-2 card-title">Неперевершені страви</h3>
+
+								<p class="label-1 card-text">Які прийдуться до смаку найвибагливішим гурманам</p>
+
+							</div>
+						</li>
+
+						<li class="feature-item">
+							<div class="feature-card">
+
+								<div class="card-icon">
+									<img src="{% static 'main/images/features-icon-2.png' %}" width="100" height="80" loading="lazy" alt="icon">
+								</div>
+
+								<h3 class="title-2 card-title">Вишукані банкетні зали</h3>
+
+								<p class="label-1 card-text">Lorem Ipsum is simply dummy printing and typesetting.</p>
+
+							</div>
+						</li>
+
+						<li class="feature-item">
+							<div class="feature-card">
+
+								<div class="card-icon">
+									<img src="{% static 'main/images/features-icon-3.png' %}" width="100" height="80" loading="lazy" alt="icon">
+								</div>
+
+								<h3 class="title-2 card-title">Досвідчені кухарі</h3>
+
+								<p class="label-1 card-text">Які здивують вас своїми чудовими стравами</p>
+
+							</div>
+						</li>
+
+						<li class="feature-item">
+							<div class="feature-card">
+
+								<div class="card-icon">
+									<img src="{% static 'main/images/features-icon-4.png' %}" width="100" height="80" loading="lazy" alt="icon">
+								</div>
+
+								<h3 class="title-2 card-title">Будь які події</h3>
+
+								<p class="label-1 card-text">Lorem Ipsum is simply dummy printing and typesetting.</p>
+
+							</div>
+						</li>
+
+					</ul>
+
+					<img src="{% static 'main/images/shape-7.png' %}" width="208" height="178" loading="lazy" alt="shape"
+					     class="shape shape-1">
+
+					<img src="{% static 'main/images/shape-8.png' %}" width="120" height="115" loading="lazy" alt="shape"
+					     class="shape shape-2">
+
+				</div>
+			</section>
+
+
+		</article>
+
+
+	{% endblock %}
